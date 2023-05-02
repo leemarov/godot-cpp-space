@@ -16,6 +16,8 @@ while read -r f; do
         continue
     elif [[ "$f" == *"glsl" ]]; then
         continue
+    elif [[ "$f" == "space/"* ]]; then
+        continue
     elif [[ "$f" == "test/"* ]]; then
         continue
     fi
