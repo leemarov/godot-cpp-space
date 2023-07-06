@@ -33,7 +33,7 @@ jobs:
             os: windows-2019
             platform: windows
             artifact-name: godot-cpp-space-windows-msvc2019-x86_64-release
-            artifact-path: space/bin/libspace.windows.template_release.x86_64.lib
+            artifact-path: space/bin/libspace.windows.template_release.x86_64.dll
             artifact-name-debug: godot-cpp-space-windows-msvc2019-x86_64-debug
             artifact-path-debug: space/bin/libspace.windows.template_debug.x86_64.dll
             run-tests: false
@@ -158,6 +158,13 @@ jobs:
           # Need to run the editor so .godot is generated... but it crashes! Ignore that :-)
           (cd project && (timeout 30 $GODOT --import --headless >/dev/null 2>&1 || true))
           ./run-tests.sh
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: ${{ matrix.artifact-name-debug }}
+          path: ${{ matrix.artifact-path-debug }}
+          if-no-files-found: error
 
       - name: Upload artifact
         uses: actions/upload-artifact@v3
