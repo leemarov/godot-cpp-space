@@ -31,7 +31,7 @@ jobs:
             os: windows-2019
             platform: windows
             artifact-name: godot-cpp-space-windows-msvc2019-x86_64-release
-            artifact-path: space/bin/libspace.windows.template_release.x86_64.lib
+            artifact-path: space/bin/libspace.windows.template_release.x86_64.dll
             artifact-name-debug: godot-cpp-space-windows-msvc2019-x86_64-debug
             artifact-path-debug: space/bin/libspace.windows.template_debug.x86_64.dll
             run-tests: false
