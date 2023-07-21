@@ -14,6 +14,7 @@
 #include "example.h"
 #include "smooth.h"
 #include "smooth_2d.h"
+#include "uuid_v4.h"
 
 using namespace godot;
 
@@ -30,6 +31,8 @@ void initialize_space_module(ModuleInitializationLevel p_level) {
 
 	ClassDB::register_class<Smooth>();
 	ClassDB::register_class<Smooth2D>();
+
+	ClassDB::register_class<UUIDv4>();
 }
 
 void uninitialize_space_module(ModuleInitializationLevel p_level) {
