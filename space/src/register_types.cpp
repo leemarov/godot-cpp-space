@@ -11,7 +11,7 @@
 #include <godot_cpp/core/defs.hpp>
 #include <godot_cpp/godot.hpp>
 
-#include "example.h"
+//#include "example.h"
 #include "smooth.h"
 #include "smooth_2d.h"
 #include "uuid_v4.h"
@@ -23,11 +23,11 @@ void initialize_space_module(ModuleInitializationLevel p_level) {
 		return;
 	}
 
-	ClassDB::register_class<ExampleRef>();
-	ClassDB::register_class<ExampleMin>();
-	ClassDB::register_class<Example>();
-	ClassDB::register_class<ExampleVirtual>(true);
-	ClassDB::register_abstract_class<ExampleAbstract>();
+	// ClassDB::register_class<ExampleRef>();
+// 	ClassDB::register_class<ExampleMin>();
+//	ClassDB::register_class<Example>();
+//	ClassDB::register_class<ExampleVirtual>(true);
+	// ClassDB::register_abstract_class<ExampleAbstract>();
 
 	ClassDB::register_class<Smooth>();
 	ClassDB::register_class<Smooth2D>();
